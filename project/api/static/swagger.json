@@ -1,0 +1,641 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Agrotopya API",
+    "description": "Toprak ve sıcaklık sensörleri kullanarak topraktaki ürünlerin su ihtiyacını tespit eden yapay zeka destekli sistem API'si",
+    "version": "1.0.0"
+  },
+  "host": "localhost:5000",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "API sağlık kontrolü",
+        "description": "API'nin sağlık durumunu kontrol eder",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Başarılı yanıt",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "example": "healthy"
+                },
+                "model_loaded": {
+                  "type": "boolean",
+                  "example": true
+                },
+                "scaler_loaded": {
+                  "type": "boolean",
+                  "example": true
+                },
+                "timestamp": {
+                  "type": "string",
+                  "example": "2025-04-25T19:28:00.000Z"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/predict": {
+      "post": {
+        "summary": "Sulama tahmini yap",
+        "description": "Sensör verilerine göre sulama tahmini yapar",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Sensör verileri",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "required": [
+                "soil_moisture",
+                "temperature",
+                "air_humidity"
+              ],
+              "properties": {
+                "soil_moisture": {
+                  "type": "number",
+                  "description": "Toprak nemi (300-1000 arası)",
+                  "example": 500.0
+                },
+                "temperature": {
+                  "type": "number",
+                  "description": "Sıcaklık (°C)",
+                  "example": 28.0
+                },
+                "air_humidity": {
+                  "type": "number",
+                  "description": "Hava nemi (%)",
+                  "example": 60.0
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Başarılı tahmin",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "prediction": {
+                  "type": "integer",
+                  "description": "0: Sulama yok, 1: Sulama gerekli",
+                  "example": 1
+                },
+                "probability": {
+                  "type": "number",
+                  "description": "Tahmin olasılığı",
+                  "example": 0.95
+                },
+                "timestamp": {
+                  "type": "string",
+                  "example": "2025-04-25T19:28:00.000Z"
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Sulama gerekli"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Geçersiz istek",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "error": {
+                  "type": "string",
+                  "example": "Eksik alan: soil_moisture"
+                },
+                "required_fields": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "example": ["soil_moisture", "temperature", "air_humidity"]
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Sunucu hatası",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "error": {
+                  "type": "string"
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Tahmin sırasında bir hata oluştu"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/history": {
+      "get": {
+        "summary": "Geçmiş verileri al",
+        "description": "Sensör verilerinin geçmişini döndürür",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Döndürülecek maksimum kayıt sayısı",
+            "required": false,
+            "type": "integer",
+            "default": 100
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "description": "Atlanacak kayıt sayısı",
+            "required": false,
+            "type": "integer",
+            "default": 0
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Başarılı yanıt",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "history": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "soil_moisture": {
+                        "type": "number",
+                        "example": 500.0
+                      },
+                      "temperature": {
+                        "type": "number",
+                        "example": 28.0
+                      },
+                      "air_humidity": {
+                        "type": "number",
+                        "example": 60.0
+                      },
+                      "prediction": {
+                        "type": "integer",
+                        "example": 1
+                      },
+                      "probability": {
+                        "type": "number",
+                        "example": 0.95
+                      },
+                      "timestamp": {
+                        "type": "string",
+                        "example": "2025-04-25T19:28:00.000Z"
+                      }
+                    }
+                  }
+                },
+                "total_records": {
+                  "type": "integer",
+                  "example": 150
+                },
+                "limit": {
+                  "type": "integer",
+                  "example": 100
+                },
+                "offset": {
+                  "type": "integer",
+                  "example": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/stats": {
+      "get": {
+        "summary": "İstatistikleri al",
+        "description": "Sensör verilerinin istatistiklerini döndürür",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Başarılı yanıt",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "soil_moisture": {
+                  "type": "object",
+                  "properties": {
+                    "min": {
+                      "type": "number",
+                      "example": 350.0
+                    },
+                    "max": {
+                      "type": "number",
+                      "example": 950.0
+                    },
+                    "mean": {
+                      "type": "number",
+                      "example": 650.0
+                    },
+                    "median": {
+                      "type": "number",
+                      "example": 670.0
+                    },
+                    "std": {
+                      "type": "number",
+                      "example": 120.0
+                    }
+                  }
+                },
+                "temperature": {
+                  "type": "object",
+                  "properties": {
+                    "min": {
+                      "type": "number",
+                      "example": 20.0
+                    },
+                    "max": {
+                      "type": "number",
+                      "example": 35.0
+                    },
+                    "mean": {
+                      "type": "number",
+                      "example": 28.0
+                    },
+                    "median": {
+                      "type": "number",
+                      "example": 27.5
+                    },
+                    "std": {
+                      "type": "number",
+                      "example": 3.5
+                    }
+                  }
+                },
+                "air_humidity": {
+                  "type": "object",
+                  "properties": {
+                    "min": {
+                      "type": "number",
+                      "example": 40.0
+                    },
+                    "max": {
+                      "type": "number",
+                      "example": 80.0
+                    },
+                    "mean": {
+                      "type": "number",
+                      "example": 60.0
+                    },
+                    "median": {
+                      "type": "number",
+                      "example": 62.0
+                    },
+                    "std": {
+                      "type": "number",
+                      "example": 8.0
+                    }
+                  }
+                },
+                "predictions": {
+                  "type": "object",
+                  "properties": {
+                    "irrigation_count": {
+                      "type": "integer",
+                      "example": 75
+                    },
+                    "no_irrigation_count": {
+                      "type": "integer",
+                      "example": 75
+                    },
+                    "irrigation_percentage": {
+                      "type": "number",
+                      "example": 50.0
+                    }
+                  }
+                },
+                "total_records": {
+                  "type": "integer",
+                  "example": 150
+                },
+                "timestamp": {
+                  "type": "string",
+                  "example": "2025-04-25T19:28:00.000Z"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/simulate": {
+      "post": {
+        "summary": "Sensör verisi simülasyonu yap",
+        "description": "Test amaçlı sensör verisi simülasyonu yapar",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Simülasyon parametreleri",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "integer",
+                  "description": "Oluşturulacak veri sayısı",
+                  "example": 10
+                },
+                "soil_moisture_range": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "description": "Toprak nemi aralığı [min, max]",
+                  "example": [350, 950]
+                },
+                "temperature_range": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "description": "Sıcaklık aralığı [min, max]",
+                  "example": [20, 35]
+                },
+                "air_humidity_range": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "description": "Hava nemi aralığı [min, max]",
+                  "example": [40, 80]
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Başarılı simülasyon",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "integer",
+                  "example": 10
+                },
+                "results": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "soil_moisture": {
+                        "type": "number",
+                        "example": 500.0
+                      },
+                      "temperature": {
+                        "type": "number",
+                        "example": 28.0
+                      },
+                      "air_humidity": {
+                        "type": "number",
+                        "example": 60.0
+                      },
+                      "prediction": {
+                        "type": "integer",
+                        "example": 1
+                      },
+                      "probability": {
+                        "type": "number",
+                        "example": 0.95
+                      },
+                      "timestamp": {
+                        "type": "string",
+                        "example": "2025-04-25T19:28:00.000Z"
+                      },
+                      "message": {
+                        "type": "string",
+                        "example": "Sulama gerekli"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sensor/data": {
+      "post": {
+        "summary": "Sensör verisi al",
+        "description": "Raspberry Pi'dan gelen sensör verilerini alır ve işler",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Sensör verileri",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "required": [
+                "device_id",
+                "soil_moisture",
+                "temperature",
+                "air_humidity"
+              ],
+              "properties": {
+                "device_id": {
+                  "type": "string",
+                  "description": "Cihaz kimliği",
+                  "example": "raspberry-pi-001"
+                },
+                "soil_moisture": {
+                  "type": "number",
+                  "description": "Toprak nemi (300-1000 arası)",
+                  "example": 500.0
+                },
+                "temperature": {
+                  "type": "number",
+                  "description": "Sıcaklık (°C)",
+                  "example": 28.0
+                },
+                "air_humidity": {
+                  "type": "number",
+                  "description": "Hava nemi (%)",
+                  "example": 60.0
+                },
+                "timestamp": {
+                  "type": "string",
+                  "description": "Zaman damgası (ISO formatı)",
+                  "example": "2025-04-25T19:28:00.000Z"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Başarılı işleme",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "device_id": {
+                  "type": "string",
+                  "example": "raspberry-pi-001"
+                },
+                "soil_moisture": {
+                  "type": "number",
+                  "example": 500.0
+                },
+                "temperature": {
+                  "type": "number",
+                  "example": 28.0
+                },
+                "air_humidity": {
+                  "type": "number",
+                  "example": 60.0
+                },
+                "prediction": {
+                  "type": "integer",
+                  "example": 1
+                },
+                "probability": {
+                  "type": "number",
+                  "example": 0.95
+                },
+                "timestamp": {
+                  "type": "string",
+                  "example": "2025-04-25T19:28:00.000Z"
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Sulama gerekli"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/device/command": {
+      "post": {
+        "summary": "Cihaza komut gönder",
+        "description": "Mobil uygulamadan cihaza komut gönderir",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Komut bilgileri",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "required": [
+                "device_id",
+                "command"
+              ],
+              "properties": {
+                "device_id": {
+                  "type": "string",
+                  "description": "Cihaz kimliği",
+                  "example": "raspberry-pi-001"
+                },
+                "command": {
+                  "type": "string",
+                  "description": "Komut adı",
+                  "example": "toggle_irrigation"
+                },
+                "parameters": {
+                  "type": "object",
+                  "description": "Komut parametreleri",
+                  "example": {
+                    "state": "on"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Başarılı komut gönderimi",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "device_id": {
+                  "type": "string",
+                  "example": "raspberry-pi-001"
+                },
+                "command": {
+                  "type": "string",
+                  "example": "toggle_irrigation"
+                },
+                "parameters": {
+                  "type": "object",
+                  "example": {
+                    "state": "on"
+                  }
+                },
+                "status": {
+                  "type": "string",
+                  "example": "sent"
+                },
+                "timestamp": {
+                  "type": "string",
+                  "example": "2025-04-25T19:28:00.000Z"
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Komut 'toggle_irrigation' cihaza gönderildi"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrotopya API Dokümantasyonu</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            background-color: #2c7744;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            color: white !important;
+        }
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .card-header {
+            background-color: #2c7744;
+            color: white;
+            font-weight: bold;
+            border-radius: 10px 10px 0 0 !important;
+        }
+        .endpoint-method {
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .method-get {
+            background-color: #17a2b8;
+            color: white;
+        }
+        .method-post {
+            background-color: #28a745;
+            color: white;
+        }
+        .footer {
+            background-color: #2c7744;
+            color: white;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+        pre {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #dee2e6;
+        }
+        .code-block {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #dee2e6;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-seedling me-2"></i>
+                Agrotopya
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/docs">API Dokümantasyonu</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Agrotopya API Dokümantasyonu</h1>
+                <p class="lead">
+                    Agrotopya API, toprak ve sıcaklık sensörlerinden gelen verileri kullanarak sulama kararları veren yapay zeka modelini sunar.
+                    Bu dokümantasyon, API'nin kullanımı hakkında bilgi sağlar.
+                </p>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-info-circle me-2"></i>
+                        Genel Bilgiler
+                    </div>
+                    <div class="card-body">
+                        <h5>Temel URL</h5>
+                        <p><code>http://[sunucu-adresi]:5000</code></p>
+                        
+                        <h5>Kimlik Doğrulama</h5>
+                        <p>Bu API şu anda kimlik doğrulama gerektirmemektedir. Üretim ortamında güvenlik önlemleri eklenmelidir.</p>
+                        
+                        <h5>Yanıt Formatı</h5>
+                        <p>Tüm API yanıtları JSON formatındadır.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <h2>Endpoints</h2>
+            </div>
+        </div>
+
+        <!-- Health Endpoint -->
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <div>
+                            <span class="endpoint-method method-get">GET</span>
+                            <span>/health</span>
+                        </div>
+                        <span class="badge bg-info">Sağlık Kontrolü</span>
+                    </div>
+                    <div class="card-body">
+                        <h5>Açıklama</h5>
+                        <p>API'nin sağlık durumunu kontrol eder.</p>
+                        
+                        <h5>Parametreler</h5>
+                        <p>Bu endpoint parametre gerektirmez.</p>
+                        
+                        <h5>Yanıt</h5>
+                        <div class="code-block">
+{
+    "status": "healthy",
+    "model_loaded": true,
+    "scaler_loaded": true,
+    "timestamp": "2025-04-25T19:28:00.000Z"
+}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Predict Endpoint -->
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <div>
+                            <span class="endpoint-method method-post">POST</span>
+                            <span>/predict</span>
+                        </div>
+                        <span class="badge bg-success">Tahmin</span>
+                    </div>
+                    <div class="card-body">
+                        <h5>Açıklama</h5>
+                        <p>Sensör verilerine göre sulama tahmini yapar.</p>
+                        
+                        <h5>İstek Gövdesi</h5>
+                        <div class="code-block">
+{
+    "soil_moisture": 500.0,  // Toprak nemi (300-1000 arası)
+    "temperature": 28.0,     // Sıcaklık (°C)
+    "air_humidity": 60.0     // Hava nemi (%)
+}
+                        </div>
+                        
+                        <h5>Yanıt</h5>
+                        <div class="code-block">
+{
+    "prediction": 1,         // 0: Sulama yok, 1: Sulama gerekli
+    "probability": 0.95,     // Tahmin olasılığı
+    "timestamp": "2025-04-25T19:28:00.000Z",
+    "message": "Sulama gerekli"
+}
+                        </div>
+                        
+                        <h5>Hata Yanıtları</h5>
+                        <div class="code-block">
+// Eksik alan
+{
+    "error": "Eksik alan: soil_moisture",
+    "required_fields": ["soil_moisture", "temperature", "air_humidity"]
+}
+
+// Sunucu hatası
+{
+    "error": "Hata mesajı",
+    "message": "Tahmin sırasında bir hata oluştu"
+}
+                        </div>
+                        
+                        <h5>Örnek Kullanım (Python)</h5>
+                        <div class="code-block">
+import requests
+import json
+
+url = "http://[sunucu-adresi]:5000/predict"
+data = {
+    "soil_moisture": 500.0,
+    "temperature": 28.0,
+    "air_humidity": 60.0
+}
+
+response = requests.post(url, json=data)
+result = response.json()
+print(result)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- History Endpoint -->
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <div>
+                            <span class="endpoint-method method-get">GET</span>
+                            <span>/history</span>
+                        </div>
+                        <span class="badge bg-secondary">Geçmiş Veriler</span>
+                    </div>
+                    <div class="card-body">
+                        <h5>Açıklama</h5>
+                        <p>Sensör verilerinin geçmişini döndürür.</p>
+                        
+                        <h5>Query Parametreleri</h5>
+                        <ul>
+                            <li><code>limit</code>: Döndürülecek maksimum kayıt sayısı (varsayılan: 100)</li>
+                            <li><code>offset</code>: Atlanacak kayıt sayısı (varsayılan: 0)</li>
+                        </ul>
+                        
+                        <h5>Yanıt</h5>
+                        <div class="code-block">
+{
+    "history": [
+        {
+            "soil_moisture": 500.0,
+            "temperature": 28.0,
+            "air_humidity": 60.0,
+            "prediction": 1,
+            "probability": 0.95,
+            "timestamp": "2025-04-25T19:28:00.000Z"
+        },
+        // ... diğer kayıtlar
+    ],
+    "total_records": 150,
+    "limit": 100,
+    "offset": 0
+}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Endpoint -->
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <div>
+                            <span class="endpoint-method method-get">GET</span>
+                            <span>/stats</span>
+                        </div>
+                        <span class="badge bg-warning text-dark">İstatistikler</span>
+                    </div>
+                    <div class="card-body">
+                        <h5>Açıklama</h5>
+                        <p>Sensör verilerinin istatistiklerini döndürür.</p>
+                        
+                        <h5>Parametreler</h5>
+                        <p>Bu endpoint parametre gerektirmez.</p>
+                        
+                        <h5>Yanıt</h5>
+                        <div class="code-block">
+{
+    "soil_moisture": {
+        "min": 350.0,
+        "max": 950.0,
+        "mean": 650.0,
+        "median": 670.0,
+        "std": 120.0
+    },
+    "temperature": {
+        "min": 20.0,
+        "max": 35.0,
+        "mean": 28.0,
+        "median": 27.5,
+        "std": 3.5
+    },
+    "air_humidity": {
+        "min": 40.0,
+        "max": 80.0,
+        "mean": 60.0,
+        "median": 62.0,
+        "std": 8.0
+    },
+    "predictions": {
+        "irrigation_count": 75,
+        "no_irrigation_count": 75,
+        "irrigation_percentage": 50.0
+    },
+    "total_records": 150,
+    "timestamp": "2025-04-25T19:28:00.000Z"
+}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Simulate Endpoint -->
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <div>
+                            <span class="endpoint-method method-post">POST</span>
+                            <span>/simulate</span>
+                        </div>
+                        <span class="badge bg-primary">Simülasyon</span>
+                    </div>
+                    <div class="card-body">
+                        <h5>Açıklama</h5>
+                        <p>Test amaçlı sensör verisi simülasyonu yapar.</p>
+                        
+                        <h5>İstek Gövdesi</h5>
+                        <div class="code-block">
+{
+    "count": 10,  // Oluşturulacak veri sayısı
+    "soil_moisture_range": [350, 950],  // Opsiyonel
+    "temperature_range": [20, 35],      // Opsiyonel
+    "air_humidity_range": [40, 80]      // Opsiyonel
+}
+                        </div>
+                        
+                        <h5>Yanıt</h5>
+                        <div class="code-block">
+{
+    "count": 10,
+    "results": [
+        {
+            "soil_moisture": 500.0,
+            "temperature": 28.0,
+            "air_humidity": 60.0,
+            "prediction": 1,
+            "probability": 0.95,
+            "timestamp": "2025-04-25T19:28:00.000Z",
+            "message": "Sulama gerekli"
+        },
+        // ... diğer simüle edilmiş veriler
+    ]
+}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sensor Data Endpoint -->
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <div>
+                            <span class="endpoint-method method-post">POST</span>
+                            <span>/sensor/data</span>
+                        </div>
+                        <span class="badge bg-danger">Sensör Verisi</span>
+                    </div>
+                    <div class="card-body">
+                        <h5>Açıklama</h5>
+                        <p>Raspberry Pi'dan gelen sensör verilerini alır ve işler.</p>
+                        
+                        <h5>İstek Gövdesi</h5>
+                        <div class="code-block">
+{
+    "device_id": "raspberry-pi-001",
+    "soil_moisture": 500.0,
+    "temperature": 28.0,
+    "air_humidity": 60.0,
+    "timestamp": "2025-04-25T19:28:00.000Z"  // Opsiyonel
+}
+                        </div>
+                        
+                        <h5>Yanıt</h5>
+                        <div class="code-block">
+{
+    "device_id": "raspberry-pi-001",
+    "soil_moisture": 500.0,
+    "temperature": 28.0,
+    "air_humidity": 60.0,
+    "prediction": 1,
+    "probability": 0.95,
+    "timestamp": "2025-04-25T19:28:00.000Z",
+    "message": "Sulama gerekli"
+}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Device Command Endpoint -->
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <div>
+                            <span class="endpoint-method method-post">POST</span>
+                            <span>/device/command</span>
+                        </div>
+                        <span class="badge bg-dark">Cihaz Komutu</span>
+                    </div>
+                    <div class="card-body">
+                        <h5>Açıklama</h5>
+                        <p>Mobil uygulamadan cihaza komut gönderir.</p>
+                        
+                        <h5>İstek Gövdesi</h5>
+                        <div class="code-block">
+{
+    "device_id": "raspberry-pi-001",
+    "command": "toggle_irrigation",
+    "parameters": {
+        "state": "on"  // veya "off"
+    }
+}
+                        </div>
+                        
+                        <h5>Yanıt</h5>
+                        <div class="code-block">
+{
+    "device_id": "raspberry-pi-001",
+    "command": "toggle_irrigation",
+    "parameters": {
+        "state": "on"
+    },
+    "status": "sent",
+    "timestamp": "2025-04-25T19:28:00.000Z",
+    "message": "Komut 'toggle_irrigation' cihaza gönderildi"
+}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Agrotopya - Akıllı Sulama Sistemi</h5>
+                    <p>Toprak ve sıcaklık sensörleri kullanarak topraktaki ürünlerin su ihtiyacını tespit eden yapay zeka destekli sistem.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>TÜBİTAK 2209-A Üniversite Öğrencileri Araştırma Projeleri Desteği Programı</p>
+                    <p>&copy; 2025 Agrotopya</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

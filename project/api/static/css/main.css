@@ -1,0 +1,58 @@
+/* Main CSS for Agrotopya API */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+.navbar {
+    background-color: #2c7744;
+}
+.navbar-brand {
+    font-weight: bold;
+    color: white !important;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+.card-header {
+    background-color: #2c7744;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px 10px 0 0 !important;
+}
+.btn-primary {
+    background-color: #2c7744;
+    border-color: #2c7744;
+}
+.btn-primary:hover {
+    background-color: #1e5631;
+    border-color: #1e5631;
+}
+.footer {
+    background-color: #2c7744;
+    color: white;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+.sensor-value {
+    font-size: 24px;
+    font-weight: bold;
+}
+.chart-container {
+    height: 300px;
+}
+#irrigation-status {
+    font-size: 18px;
+    font-weight: bold;
+}
+.status-on {
+    color: #28a745;
+}
+.status-off {
+    color: #dc3545;
+}

@@ -1,0 +1,308 @@
+﻿
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TÜBİTAK–2209-A ÜNİVERSİTE ÖĞRENCİLERİ ARAŞTIRMA PROJELERİ DESTEĞİ PROGRAMI
+
+
+ARAŞTIRMA ÖNERİSİ FORMU
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2023 Yılı
+
+II. Dönem Başvurusu
+A. GENEL BİLGİLER
+
+Başvuru Sahibinin Adı Soyadı: Burak YALÇIN, Defne DEMİR, Musa Talat DEMİR
+Araştırma Önerisinin Başlığı: Toprak ve Sıcaklık Sensörleri Kullanarak Topraktaki Ürünlerin Su İhtiyacını Agrotopya ile Tespit Etmek
+Danışmanın Adı Soyadı: Prof. Dr. Melih Günay
+Araştırmanın Yürütüleceği Kurum/Kuruluş: Akdeniz Üniversitesi – Mühendislik Fakültesi – Bilgisayar Mühendisliği Bölümü 
+
+
+ÖZET
+
+     Türkçe özetin araştırma önerisinin (a) özgün değeri, (b) yöntemi, (c) yönetimi ve (d) yaygın etkisi hakkında bilgileri kapsaması beklenir. Bu bölümün en son yazılması önerilir. 
+
+Özet
+
+Projenin amacı, ülkemizdeki çiftçilerimiz için tarımsal faaliyetlerin otomatize edilerek daha kontrollü ilerletilmesini sağlamak, geliştirilecek olan mobil uygulama ile mevcut durumun her an her yerde kontrol edilebilir olmasını sağlamak, toprak ve sıcaklık sensörleri kullanarak topraktaki ürünlerin su ihtiyacını tespit edip su israfını önlemek, sensör verilerinin toplanması ile elde edilen çıktıların yapay zeka programımız agrotopya ile  görselleştirilmesidir.
+Flutter ile geliştirilen basit bir mobil uygulama, çiftçilere su depolarındaki su miktarı, su pH seviyesi ve toprak nem oranı gibi bilgileri anlık olarak takip etme imkanı sunar. Ayrıca, ilaçlama ve gübreleme gibi önemli tarım aktiviteleri için hatırlatıcı bildirimler de içerir.
+Projenin donanım kısmını Raspberry Pi tabanlı bir tasarım oluşturacak. Projede kullanılan nem sensörü, pH sensörü, sıcaklık ölçümü için kullanılan sensörlerimiz Raspberry Pi ile yönetilecektir. Uygulama içindeki kullanıcı ve veritabanı ile etkileşimler bu cihazın wifi özelliğinden yararlanılarak sağlanacaktır.
+Projemiz kapsamında akıllı sulama sistemi ile bitkilere ihtiyaçları kadar su verdiğimizde hem bitkinin çürümesini ve oluşabilecek diğer olumsuzlukları engellemiş olacağız hem de su tüketimini kontrol altında tutacağız. Böylelikle ülkemizin yaşadığı su problemlerine tarım alanından bir çözüm sunuyoruz. Bu proje sadece mevcut su kaynaklarını daha etkili bir şekilde kullanmakla kalmayacak, aynı zamanda sürdürülebilir tarım uygulamalarına da katkıda bulunacaktır. Su kullanımında verimliliği artırmak ve sınırsız kaynaklara olan bağımlılığı azaltmak, tarımsal üretkenliği sürdürülebilir şekilde artırmak için hayati öneme sahiptir.
+Çalışmanın yönetim planlanması açısından 6-9 ay sürmesi planlanmaktadır. Çalışmanın özgün değeri olarak; 1- Bitki türüne özel sulama sisteminin otomatize edilmesi. 2- Sistemde yer alacak kontrol sisteminin verilerle, grafiklerle, desteklenerek kullanıcılar için kullanımı kolay bir mobil uygulama geliştirilmesi. Çalışmanın yaygın etkisi olarak; tarımda bitki sulama işlemlerinde su tüketimini optimum hale getirmek ve bu sürecin çiftçiler için takibini kolaylaştıracağı öngörülmektedir.
+
+
+ Anahtar Kelimeler: mobil uygulama, Raspberry Pi, agrotopya, toprak ve nem sensörleri
+
+
+
+    1. ÖZGÜN DEĞER 
+
+ 1.1. Konunun Önemi, Araştırma Önerisinin Özgün Değeri ve Araştırma Sorusu/Hipotezi
+
+Araştırma önerisinde ele alınan konunun kapsamı ve sınırları ile önemi literatürün eleştirel bir değerlendirmesinin yanı sıra nitel veya nicel verilerle açıklanır.
+
+Özgün değer yazılırken araştırma önerisinin bilimsel değeri, farklılığı ve yeniliği, hangi eksikliği nasıl gidereceği veya hangi soruna nasıl bir çözüm geliştireceği ve/veya ilgili bilim veya teknoloji alan(lar)ına kavramsal, kuramsal ve/veya metodolojik olarak ne gibi özgün katkılarda bulunacağı literatüre atıf yapılarak açıklanır. 
+ 
+Önerilen çalışmanın araştırma sorusu ve varsa hipotezi veya ele aldığı problem(ler)i açık bir şekilde ortaya konulur.
+
+Bu araştırma önerisi, toprak ve sıcaklık sensörleri kullanarak bitki su ihtiyacını belirlemek ve akıllı sulama sistemlerini optimize etmeyi vurgular. Su kaynaklarının sürdürülebilir kullanımına katkı sağlayacaktır. Araştırmanın özgün değeri, bu üç alanın entegrasyonu ile ilgilidir. Bu çalışma, tarım su verimliliğini artırmak ve su kaynaklarını korumak için yeni bir yaklaşım sunacaktır.
+Araştırmanın temel sorusu, "Toprak ve sıcaklık sensörleri kullanılarak akıllı tarım sulama nasıl optimize edilebilir ve su kaynaklarının daha etkili bir şekilde korunmasına katkıda bulunabilir?" şeklinde ortaya konulmaktadır. 
+Bu önerilen çalışma; akıllı tarım sulama sistemleri, toprak ve sıcaklık sensörlerinin verim artırmada kullanımı ve yağmur suyu toplama teknolojilerini bir araya getirerek hem su tasarrufu hem de tarım ürünlerinin verimliliğini artırma potansiyeline sahiptir.
+
+
+
+
+
+        1.2. Amaç ve Hedefler
+   
+Araştırma önerisinin amacı ve hedefleri açık, ölçülebilir, gerçekçi ve araştırma süresince ulaşılabilir nitelikte olacak şekilde yazılır.
+
+
+
+Bu araştırma önerisinin temel amacı, akıllı tarım sulama sistemlerinin su kaynaklarının sürdürülebilirliği ve topraktaki verimliliği artırmaktır. Bu amacı gerçekleştirmek için aşağıdaki hedefler belirlenmiştir:
+    1. Toprak ve sıcaklık sensörleri kullanarak bitki su ihtiyacını belirlemek ve akıllı sulama sistemlerini optimize etmek.
+    2. Topraktaki nem ve sıcaklığın bitkinin büyümesi üzerindeki etkilerini inceleyerek ideal büyüme koşullarını belirlemek. 
+    3. Akıllı sensörler ve veri analitiği kullanarak sulama süreçlerini optimize etmek, bitki türüne özel sulama gerçekleştirmek, verimliliği artırmak. Örneğin turunçgiller havadaki nemden beslenir, havadaki nemin yetersiz olduğu durumda su takviyesi yapılır.
+    4. Akıllı sulama sistemleri kullanarak su tasarrufu sağlamak ve kaynakların sürdürülebilirliğini sağlamak.
+    5. Toplanan verilerle agrotopya yapay zeka programımızı oluşturmak ve geliştirmek.
+    6. Araştırma sonuçlarını paylaşarak tarım sektöründeki paydaşlara bilimsel ve teknolojik olarak dayalı bir yaklaşım sunmak.
+Bu hedefler, projenin amacına ulaşmak için gerçekçi ve ölçülebilir bir yol haritasını temsil eder ve araştırma süresince başarılabilirler. Bu proje, su kaynaklarına daha sürdürülebilir bir yaklaşım sunmak ve tarımın verimliliğini artırmak için önemli bir adım olarak görülmektedir.
+
+
+
+
+
+
+    2. YÖNTEM
+
+Araştırma önerisinde uygulanacak yöntem ve araştırma teknikleri (veri toplama araçları ve analiz yöntemleri dahil) ilgili literatüre atıf yapılarak açıklanır. Yöntem ve tekniklerin çalışmada öngörülen amaç ve hedeflere ulaşmaya elverişli olduğu ortaya konulur. 
+
+Yöntem bölümünün araştırmanın tasarımını, bağımlı ve bağımsız değişkenleri ve istatistiksel yöntemleri kapsaması gerekir. Araştırma önerisinde herhangi bir ön çalışma veya fizibilite yapıldıysa bunların sunulması beklenir. Araştırma önerisinde sunulan yöntemlerin iş paketleri ile ilişkilendirilmesi gerekir.
+
+
+
+        2.1. Veri Toplama Araçları ve Teknikleri:
+Bu projede veri toplama işlemi, çeşitli sensörler ve yazılım araçları kullanılarak gerçekleştirilecektir. Verilerin toplanmasını sağlayacak ana araçlar şunlardır:
+2.1.1. Su Seviye Sensörleri: Su tanklarının doluluk seviyelerini izlemek için su seviye sensörleri kullanılacaktır. Bu sensörler, ultrasonik mesafe ölçme teknolojisi kullanarak su seviyesini sürekli olarak ölçer. Arduino veya Raspberry PI gibi mikrodenetleyicilerle entegre edilirler. Sensör tarafından gönderilen ses dalgaları, su seviyesine çarpar ve geri yansır. Bu süreç, su seviyesinin doğru bir şekilde ölçülmesini sağlar.
+2.1.2. Toprak Nem ve Sıcaklık Sensörleri: Toprak nem sensörleri, bitkilerin sulama ihtiyacını belirlemek için toprak nemini ölçer. Toprak yeterli neme ulaştığında sistemin su vermeyi bırakması için sisteme veri sağlar. İletkenlik tabanlı sensörler veya kapasitif sensörler kullanılabilir. İletkenlik tabanlı sensörler, toprak iletkenliğini ölçer ve bu değeri toprak nemine dönüştürür. Kapasitif sensörler ise toprak ile elektrotlar arasındaki kapasitansı ölçer. Bu değer, toprak nemini belirlemek için kullanılır. Ayrıca, sıcaklık sensörleri de sisteme entegre edilerek toprak sıcaklığını ölçebilir. Bu bilgi, bitkilerin büyüme koşulları için kritik bir faktördür. Sıcaklık sensörleri, toprak sıcaklığına bağlık olarak bitki büyümesini etkileyen pek çok süreci analiz etmek için kullanılabilir. Örneğin, bazı bitkiler belirli bir sıcaklık aralığından daha düşük veya yüksek sıcaklıklarda kötüleşebilir. Sistem, toprak sıcaklığı verilerini de değerlendirerek bitkilerin ideal koşullarda büyümesini sağlamak için gerekli düzenlemeleri yapabilir. 
+2.1.3. Mikrodenetleyiciler (Arduino, Raspberry PI): Mikrodenetleyiciler, sensörlerden gelen verileri alacak, işleyecek ve sulama sistemi üzerinde otomasyon sağlayacaktır. Örneğin, Arduino mikrodenetleyicisi, sensörlerden alınan verileri işleyerek su seviyelerini kontrol eder ve sulama pompalarını açar veya kapatır. Raspberry PI, veri toplama, analiz ve karar verme süreçlerini daha karmaşık hale getirebilir ve uzaktan erişim sağlayabilir. Mikrodenetleyiciler, sensörlerle iletişim kurar, verileri saklar ve analiz eder ve bu sayede sulama kararlarını otomatik olarak optimize eder.
+
+        2.2. IoT Cihazlarının Kullanımı:
+2.2.1 IoT Cihazlarının Bağlantısı: IoT cihazları, hafif, güvenilir ve düşük bant genişliği tüketen MQTT protokolü üzerinden birbirleriyle bağlantı kuracaktır. Arduino tabanlı cihazların MQTT broker ile nasıl iletişim kurabileceğini göstermek için PubSubClient kütüphanesi kullanılacaktır.
+2.2.2 IoT Cihazlarının Uzaktan Yönetimi: IoT cihazlarının uzaktan kontrolü için cihaz yazılımına uzaktan yazılım işlevselliği eklenecektir. Uzaktan yönetim protokolü MQTT ile olacaktır. Bu cihazın uzaktan yönetilmesine, yazılım güncellemelerinin uzaktan yapılmasına, cihazların durum bilgisine ulaşmaya olanak sağlayacaktır.
+2.2.3 IoT Cihazlarının Veri Aktarımı ve Depolanması: IoT cihazları, veri aktarımını sağlamak ve bu verileri depolamak için MQTT protokolünü kullanacaktır. Cihazlar, bu protokol aracılığıyla sensör verilerini güvenli ve etkili bir şekilde bir MQTT broker'ına iletecek, ardından bu verileri depolamak üzere ilgili bir veri tabanına yönlendirecektir. Bu yöntem, IoT cihazlarının gerçek zamanlı veri iletimini ve uzun vadeli depolama ihtiyaçlarını karşılamak amacıyla benimsenmiştir. Bu sayede, cihazlar arasında veri alışverişi optimize edilirken, depolanan verilerin analizi ve uzun vadeli kullanımı da mümkün olacaktır.
+
+      2.3. Veri Analiz ve İşleme:
+2.3.1. Veri İşleme Yazılımları: Toplanan veriler, Python programlama dilini kullanarak işlenecek ve bu süreçte yapay zeka algoritmaları da entegre edilecektir. Python, veri analizi, işleme ve görselleştirme için güçlü bir dil olmasının yanı sıra, yapay zeka uygulamaları için de yaygın olarak kullanılan bir platformdur. Veri işleme yazılımları, sensörlerden gelen verileri Python ile işleyecek, verileri düzenleyecek, eksik verileri dolduracak ve analiz için uygun veri yapıları oluşturacaktır. Bu süreç, sadece verilerin düzenlenmesi ve analiziyle kalmayıp aynı zamanda yapay zeka desteğiyle daha derinlemesine bilgi çıkarmayı sağlayacaktır. IoT cihazları, sensörler aracılığıyla sürekli olarak veri toplar ve bu verileri analiz eder. Bu sayede toprak, su ve bitki durumu hakkında daha kapsamlı bilgiler elde edilebilir.
+2.3.2. Veri Analizi Yöntemleri: Verilerin analizi için çeşitli istatistiksel ve veri madenciliği yöntemleri kullanılacaktır. Bu yöntemler, toprak nem seviyeleri, hava koşulları ve su seviyesi gibi verileri inceleyerek sulama kararlarını optimize etmeye yardımcı olur. Örneğin, regresyon analizi kullanılarak toprak nem seviyeleri ile bitki büyümesi arasındaki ilişki değerlendirilecek. Sensörler, toprağa gömülecek ve sürekli olarak veri alacak. Toplanan veriler, her 15 dakikada bir incelenecek. Bu süreçte bitki büyüklüğü, hava sıcaklığı ve nem düzeyi gibi faktörler de gözlemlenecektir. Analiz sonucu elde edilen bilgiler grafikleştirilip mobil uygulamaya gönderilecektir.
+2.3.3. Karar Destek Sistemi: Veri analizi sonuçlarına dayanarak bir karar destek sistemi geliştirilecektir. Bu sistem, sulama zamanlaması, süresi ve miktarı gibi faktörlere dayalı olarak otomatik sulama kararları alacak ve sulama işlemini optimize edecektir. Karar destek sistemi, programlanabilir mikrodenetleyiciler aracılığıyla sulama sistemini kontrol eder. Belirli bir su ihtiyacı karşılandığında veya belirli bir durum meydana geldiğinde sistem kullanıcıyı bilgilendirecektir.
+2.3.4. Uzaktan İzleme ve Erişim: Proje, verilere uzaktan erişim ve izleme yeteneği sağlayacaktır. Veriler yetiştirilen tarım ürününe özel sınıflandırılacaktır. Veriler, internet bağlantısı aracılığıyla uzaktan erişilebilir olacak, böylece kullanıcılar veya çiftçiler herhangi bir cihazdan verilere erişebilir ve gerektiğinde müdahale edebilir. Sistem olası durumlarda kullanıcıya uyarı bildirimleri gönderecektir
+
+Veri işleme yazılımları, analiz yöntemleri ve karar destek sistemi, projenin veri tabanlı yaklaşımını vurgulayan kritik unsurlardır.
+
+2.4. Yapay Zeka Modeli Agrotopya:
+Agrotopya, projemizin temelini oluşturan ve mobil uygulamanın içeriğinde bulunan yapay zeka modelidir. Bu model, toprak ve sıcaklık sensörleri tarafından sağlanan verileri analiz ederek tarım alanında yetişen bitkilerin su ihtiyacını belirlemek amacıyla geliştirilmiştir. Agrotopya'nın ana görevi, bitkilerin büyüme koşullarıyla ilgili doğru ve zamanında bilgiler üreterek çiftçilere yardımcı olmaktır.
+
+2.4.1. Agrotopya’nın Temel Özellikleri: Agrotopya; toprak nem seviyeleri, sıcaklık, pH düzeyi ve diğer çeşitli sensör verilerini kullanarak bitki su ihtiyacını tahmin etme yeteneğine sahiptir. Veri analizi sürekli olarak güncellenir ve gerçek zamanlı sonuçlar üretilir. Agrotopya, makine öğrenimi algoritmalarını kullanarak toprak ve bitki verilerinden öğrenme kabiliyetine sahiptir. Bu sayede, zamanla daha hassas ve özelleştirilmiş tahminler yapabilir. Model, çiftçilere su yönetimi konusunda pratik öneriler sunar. Bitki türüne, iklim koşullarına ve toprak özelliklerine özgü öneriler, çiftçilere su kaynaklarını daha etkin bir şekilde yönetme konusunda rehberlik eder. Agrotopya, kullanıcılara  mobil uygulama üzerinden anlık uyarılar ve bildirimler göndererek, özellikle su stresi, toprak kuruluğu gibi acil durumlar konusunda çiftçileri bilgilendirir. Model, MQTT protokolü üzerinden alınan sensör verileriyle etkileşim kurar ve bu verileri depolama hizmetlerine ileterek uzun vadeli analizlere olanak tanır.
+
+2.4.2 Agrotopya’nın Faydaları: Bitki su ihtiyacının doğru tahmin edilmesi, su kullanımını optimize ederek tarım verimliliğini artırır. Gerçek zamanlı veri analizi sayesinde çiftçiler, tarımsal faaliyetleri için daha bilinçli ve hızlı kararlar alabilir. Agrotopya, su kullanımını optimize ederek çevresel sürdürülebilirlik ve su tasarrufuna katkı sağlar.
+
+
+2.5. KPI Belirleme:
+KPI’lar bir projenin amacı doğrultusunda ilerleyip ilerlemediğinin ölçümü yapan bir parametredir. KPI kullanımındaki amaç yapay zeka tabanlı toplanan verilerin belirli periyotlarla kontrol edilen bir diğer otomasyon sistem ile düzenli ve tutarlı kalmasını sağlamak, uzun vadeli verimliliğin artmasını azami boyuta yükseltmektir.
+
+
+    3  PROJE YÖNETİMİ 
+
+        3.1 İş- Zaman Çizelgesi
+
+Araştırma önerisinde yer alacak başlıca iş paketleri ve hedefleri, her bir iş paketinin hangi sürede gerçekleştirileceği, başarı ölçütü ve araştırmanın başarısına katkısı “İş-Zaman Çizelgesi” doldurularak verilir. Literatür taraması, gelişme ve sonuç raporu hazırlama aşamaları, araştırma sonuçlarının paylaşımı, makale yazımı ve malzeme alımı ayrı birer iş paketi olarak gösterilmemelidir.
+Başarı ölçütü olarak her bir iş paketinin hangi kriterleri sağladığında başarılı sayılacağı açıklanır. Başarı ölçütü, ölçülebilir ve izlenebilir nitelikte olacak şekilde nicel veya nitel ölçütlerle (ifade, sayı, yüzde, vb.) belirtilir.
+
+
+İŞ-ZAMAN ÇİZELGESİ (*)
+        
+İP No
+İş Paketlerinin Adı ve Hedefleri
+Kim(ler) Tarafından Gerçekleştirileceği
+Zaman Aralığı
+(..-.. Ay)
+Başarı Ölçütü ve Projenin Başarısına Katkısı 
+1
+Raspberry Pi tabanlı sulama sisteminin tasarlanması
+Burak, Defne, Talat
+İlk 2 ay
+Raspberry PI tabanlı kontrol sisteminin gelen verileri toplayıp su pompasını kontrol etmesi
+Projenin Başarısına Katkısı (%): 25
+2
+Sensörlerin sisteme entegrasyonu ve bitkiye özel sınıflandırma oluşturulması
+Burak, Defne, Talat
+3-5. aylar
+Sensörlerin sisteme başarılı bir şekilde entegre edilmesi ve bitkiye özgü sınıflandırma modelinin etkili bir şekilde oluşturulması, projenin başarı ölçütlerini belirleyecektir. Bu durum, sistemin güvenilir veri sağlama ve bitki türlerini doğru bir şekilde sınıflandırma yeteneğini içermektedir. Projenin Başarısına Katkısı (%): 30
+3
+Yapay zekanın sisteme entegre edilmesi
+Burak, Defne, Talat
+6-7. aylar
+Karar Destek Sistemi'nin oluşturulması, belirli durumlarda gereken kararların alınmasına etkili bir şekilde katkıda bulunacaktır.
+Projenin Başarısına Katkısı (%): 30
+4
+Sonuçların analiz edilmesi
+Burak, Defne, Talat
+8-9. aylar
+Projenin işlevselliğinin analizi
+Proje Başarısına Katkısı (%): 15
+                                                                                                                                                                 
+                                                                                                                                                                  Projenin Başarısına Toplam Katkısı (%): 100
+
+(*) Çizelgedeki satırlar ve sütunlar gerektiği kadar genişletilebilir ve çoğaltılabilir.
+
+        3.2 Risk Yönetimi
+   Araştırmanın başarısını olumsuz yönde etkileyebilecek riskler ve bu risklerle karşılaşıldığında araştırmanın başarıyla yürütülmesini sağlamak için alınacak tedbirler (B Planı) ilgili iş paketleri belirtilerek ana hatlarıyla aşağıdaki Risk Yönetimi Tablosu’nda ifade edilir. B planlarının uygulanması araştırmanın temel hedeflerinden sapmaya yol açmamalıdır.
+
+                                                       RİSK YÖNETİMİ TABLOSU*
+İP No
+En Önemli Riskler
+Risk Yönetimi (B Planı)
+1
+
+Projenin başlangıcından sonra piyasaya çıkan yeni teknolojik gelişmelerin projeyi etkilemesi.
+Proje süresince yeni teknolojik gelişmeleri takip etmek ve gerektiğinde projeyi güncellemek.
+   (*) Tablodaki satırlar gerektiği kadar genişletilebilir ve çoğaltılabilir.
+
+    1. 
+    2. 
+    3. 
+        3.1. 
+        3.2. 
+        3.3. Araştırma Olanakları
+
+Bu bölümde projenin yürütüleceği kurum ve kuruluşlarda var olan ve projede kullanılacak olan altyapı/ekipman (laboratuvar, araç, makine-teçhizat, vb.) olanakları belirtilir.
+
+ARAŞTIRMA OLANAKLARI TABLOSU (*)
+
+Kuruluşta Bulunan Altyapı/Ekipman Türü, Modeli
+(Laboratuvar, Araç, Makine-Teçhizat, vb.)
+Projede Kullanım Amacı
+Akdeniz Üniversitesi-Mühendislik Fakültesi-Bilgisayar 
+Mühendisliği Bölümü Laboratuvarı
+Prototip sistemi geliştirmek için gerekli olan bazı 
+temel malzemelerin tedarik edilmesi
+
+ (*) Tablodaki satırlar gerektiği kadar genişletilebilir ve çoğaltılabilir.
+
+    4. YAYGIN ETKİ
+
+      Önerilen çalışma başarıyla gerçekleştirildiği takdirde araştırmadan elde edilmesi öngörülen ve beklenen yaygın etkilerin neler olabileceği, diğer bir ifadeyle yapılan araştırmadan ne gibi çıktı, sonuç ve etkilerin elde edileceği aşağıdaki tabloda verilir.
+
+ARAŞTIRMA ÖNERİSİNDEN BEKLENEN YAYGIN ETKİ TABLOSU
+Yaygın Etki Türleri
+Önerilen Araştırmadan Beklenen Çıktı, Sonuç ve Etkiler
+Bilimsel/Akademik 
+(Makale, Bildiri, Kitap Bölümü, Kitap)
+1. Çalışmadan elde edilen sonuçların bilimsel bir 
+makalede yayımlanması.
+Ekonomik/Ticari/Sosyal
+(Ürün, Prototip, Patent, Faydalı Model, Üretim İzni, Çeşit Tescili, Spin-off/Start- up Şirket, Görsel/İşitsel Arşiv, Envanter/Veri Tabanı/Belgeleme Üretimi, Telife Konu Olan Eser, Medyada Yer Alma, Fuar, Proje Pazarı, Çalıştay, Eğitim vb. Bilimsel Etkinlik, Proje Sonuçlarını Kullanacak Kurum/Kuruluş, vb. diğer yaygın etkiler)
+1. Çalışmanın tarımla uğraşan insanların tarımda 
+su tüketimini optimum düzeye getirerek hem 
+gereksiz su tüketimini engellemesi hem de 
+bitkilerden daha fazla verim alınmasını 
+sağlaması beklenmektedir.
+Araştırmacı Yetiştirilmesi ve Yeni Proje(ler) Oluşturma 
+(Yüksek Lisans/Doktora Tezi, Ulusal/Uluslararası Yeni Proje)
+
+
+
+5. BÜTÇE TALEP ÇİZELGESİ
+Bütçe Türü
+ Talep Edilen Bütçe Miktarı (TL)
+Talep Gerekçesi
+Sarf Malzeme
+3000
+Projede kullanılacak sensörler(5 tane nem ve toprak, 2 tane nem ve ısı, su seviye sensörleri), devre elemanı, devre güç kaynağı vb., IoT cihazları, su depolama alanı tasarımı vb. sarf malzemelerin maliyeti
+Makina/Teçhizat (Demirbaş)
+4500
+Raspberry PI Model B, Arduino
+Hizmet Alımı
+1500
+Olası gerek duyulacak harcamalar
+Ulaşım
+
+
+TOPLAM
+9000
+
+NOT: Bütçe talebiniz olması halinde hem bu tablonun hem de TÜBİTAK Yönetim Bilgi Sistemi (TYBS) başvuru ekranında karşınıza gelecek olan bütçe alanlarının doldurulması gerekmektedir. Yukardaki tabloda girilen bütçe kalemlerindeki rakamlar ile, TYBS başvuru ekranındaki rakamlar arasında farklılık olması halinde TYBS ekranındaki veriler dikkate alınır ve başvuru sonrasında değiştirilemez.
+
+6. BELİRTMEK İSTEDİĞİNİZ DİĞER KONULAR
+Sadece araştırma önerisinin değerlendirilmesine katkı sağlayabilecek bilgi/veri (grafik, tablo, vb.) eklenebilir. 
+
+
+
+ 
+
+7. EKLER
+
+EK-1:  KAYNAKLAR
+
+Al-Ali, A. R., Nabulsi, A. A, Mukhopadhyay, S., Awal, M. S., Fernandes, S., Ailabouni, K., “IoT-solar energy powered smart farm irrigation system”, Journal of Electronic Science and Technology,17 (4), 1-14, (2019).
+
+Altunbaş Y., “Bitki su ihtiyacına göre uzaktan kontrollü bahçe sulama sistemi”, Yüksek Lisans Tezi, Erzincan Binali Yıldırım Üniversitesi Fen Bilimleri Enstitüsü, Elektrik-Elektronik Mühendisliği Anabilim Dalı, Erzincan, (2018).
+
+Demirbaş, H., “Güneş Enerjili Otomatik Bitki Sulama Sistemi”, Yüksek Lisans Tezi, Pamukkale Üniversitesi Fen Bilimleri Enstitüsü Makina Mühendisliği Anabilim Dalı, Muğla, (2021).
+
+Ersin, Ç., “Arduino mikrodenetleyici ve güneş enerjisi ile çalışan otomatik bitki sulama sistemi”, Yüksek Lisans Tezi, Süleyman Demirel Üniversitesi Fen Bilimleri Enstitüsü, Enerji Sistemleri Mühendisliği Anabilim Dalı, Isparta, (2015).
+
+Pınar S., Ruşen Y., “Sürdürülebilirlik Sürecinde Yağmur Suyu Hasadı: Sinop Üniversitesi Kuzey 
+Yerleşkesi Örneği”, Türk Tarım ve Doğa Bilimleri Dergisi, (2023)
+
+Sedat B.(1 ), Kübra A.(2) , “Kurak ve Yarı Kurak İklim Koşullarında Sera Çatısından Sulama Amaçlı Yağmur Suyu Hasadı” , 1Kırşehir Ahi Evran Universitesi, Ziraat Fakültesi, Biyosistem Mühendisliği Bölümü, 40100, Kırşehir, 2Kırşehir Ahi Evran Universitesi, Fen Bilimleri Enstitüsü, Biyosistem Mühendisliği Anabilim Dalı, 40100, Kırşehir,  (2023)
+
+Fethi B., “Toprak ve Bitki Analizleri”, Ondokuzmayıs Üniversitesi Ziraat Fakültesi, Samsun (1986)
+
+Ruhi B., “Bitki Su-Verim (Üretim) Fonksiyonları”, Akdeniz Üniversitesi Ziraat Fakültesi Dergisi,
+(1986) 
+
+Ekberli İ., Sarılar Y., “Toprak Sıcaklığı ve Isısal Yayınımının Belirlenmesi”, Anadolu Tarımlar Bilimleri Dergisi, (2015)
+
+Ekberli İ., Gülser C., “Toprak Sıcaklığının Isı Miktarına Bağlı Olarak Değişiminin Matematiksel Modellenmesi”, Harran Tarım ve Gıda Bilimleri Dergisi, (2020)
+
+Muhammet A., Enes Ç., ”Büyük Veri Analizinde Yapay Zeka ve Makine Öğrenmesi Uygulamaları”, Mehmet Akif Ersoy Üniversitesi Sosyal Bilimler Enstitüsü Dergisi, (2017)
+
+
+EK-2:  REFERANSLAR
+
+Ali Kaan Y., Mehmetcan A., “Methods of Soil Moisture Content Monitoring and Determination” BŞEÜ Fen Bilimleri Dergisi 8(1), 484-496, (2021)
+
+Miraç K., Mesut B., (2022), ”Arazi Bozulması ve Toprak Kalitesi İlişkisi”, Toprak Kalitesi ve Değerlendirilmesi, 5-45
+
+Hikmet G., Mesut B., (2022), “Toprak Kalitesi ve Ekosistem Hizmetleri Arasındaki İlişkinin İrdelenmesi”, Toprak Kalitesi ve Değerlendirilmesi, 45-67
+
+
+
+

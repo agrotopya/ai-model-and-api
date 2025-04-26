@@ -1,0 +1,35 @@
+Veri Seti Analizi
+=================
+
+Veri seti boyutu: (3000, 4)
+
+Veri seti sütunları:
+- Soil Moisture
+- Temperature
+- Air Humidity
+- Pump Data
+
+Veri seti örnek veriler:
+   Soil Moisture  Temperature  Air Humidity  Pump Data
+0     683.802906    29.184908     71.789699          0
+1     408.571567    33.707205     77.977391          1
+2     659.092074    24.760311     60.776282          1
+3     842.929764    32.738515     59.323543          0
+4     414.199320    25.692744     66.624914          1
+
+Veri seti istatistikleri:
+       Soil Moisture  Temperature  Air Humidity    Pump Data
+count    3000.000000  3000.000000   3000.000000  3000.000000
+mean      662.419754    28.443043     59.387209     0.523000
+std       187.936297     6.018565     12.428161     0.499554
+min       314.511016    18.002132     38.000201     0.000000
+25%       501.362575    23.320750     48.661993     0.000000
+50%       666.578554    28.361854     58.975423     1.000000
+75%       821.867423    33.595989     70.138397     1.000000
+max       984.828010    38.992770     81.267407     1.000000
+
+Eksik veriler:
+Soil Moisture    0
+Temperature      0
+Air Humidity     0
+Pump Data        0

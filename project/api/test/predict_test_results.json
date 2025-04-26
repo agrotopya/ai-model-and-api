@@ -1,0 +1,55 @@
+[
+  {
+    "test_case": {
+      "name": "D\u00fc\u015f\u00fck toprak nemi (sulama gerekli)",
+      "data": {
+        "soil_moisture": 400.0,
+        "temperature": 28.0,
+        "air_humidity": 60.0
+      },
+      "expected_prediction": 1
+    },
+    "result": {
+      "message": "Sulama gerekli",
+      "prediction": 1,
+      "probability": 1.0,
+      "timestamp": "2025-04-25T19:33:46.344412"
+    },
+    "success": true
+  },
+  {
+    "test_case": {
+      "name": "Y\u00fcksek toprak nemi (sulama gereksiz)",
+      "data": {
+        "soil_moisture": 850.0,
+        "temperature": 28.0,
+        "air_humidity": 60.0
+      },
+      "expected_prediction": 0
+    },
+    "result": {
+      "message": "Sulama gerekli de\u011fil",
+      "prediction": 0,
+      "probability": 0.02,
+      "timestamp": "2025-04-25T19:33:46.371195"
+    },
+    "success": true
+  },
+  {
+    "test_case": {
+      "name": "S\u0131n\u0131r de\u011fer testi",
+      "data": {
+        "soil_moisture": 666.0,
+        "temperature": 28.0,
+        "air_humidity": 60.0
+      }
+    },
+    "result": {
+      "message": "Sulama gerekli",
+      "prediction": 1,
+      "probability": 1.0,
+      "timestamp": "2025-04-25T19:33:46.393121"
+    },
+    "success": true
+  }
+]

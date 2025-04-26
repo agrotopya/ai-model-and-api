@@ -1,0 +1,9 @@
+{
+  "total_requests": 100,
+  "successful_requests": 100,
+  "success_rate": 100.0,
+  "average_response_time": 0.022049775123596193,
+  "requests_per_second": 45.346067367868876,
+  "total_time": 2.2052628993988037,
+  "timestamp": "2025-04-25T19:33:49.368515"
+}

@@ -1,0 +1,95 @@
+{
+  "count": 10,
+  "results": [
+    {
+      "air_humidity": 43.776944396396715,
+      "message": "Sulama gerekli",
+      "prediction": 1,
+      "probability": 1.0,
+      "soil_moisture": 646.0744159392834,
+      "temperature": 21.272466695388594,
+      "timestamp": "2025-04-25T19:33:44.757809"
+    },
+    {
+      "air_humidity": 77.35247232564669,
+      "message": "Sulama gerekli",
+      "prediction": 1,
+      "probability": 1.0,
+      "soil_moisture": 509.91402105944974,
+      "temperature": 20.833703649677823,
+      "timestamp": "2025-04-25T19:33:44.774173"
+    },
+    {
+      "air_humidity": 70.3415369198704,
+      "message": "Sulama gerekli de\u011fil",
+      "prediction": 0,
+      "probability": 0.0,
+      "soil_moisture": 731.8713304391542,
+      "temperature": 24.712690296391663,
+      "timestamp": "2025-04-25T19:33:44.791507"
+    },
+    {
+      "air_humidity": 79.91415047640683,
+      "message": "Sulama gerekli",
+      "prediction": 1,
+      "probability": 0.96,
+      "soil_moisture": 444.91623133628707,
+      "temperature": 20.83512060447368,
+      "timestamp": "2025-04-25T19:33:44.806986"
+    },
+    {
+      "air_humidity": 70.04071244091756,
+      "message": "Sulama gerekli de\u011fil",
+      "prediction": 0,
+      "probability": 0.0,
+      "soil_moisture": 854.7987689452239,
+      "temperature": 23.887356768936666,
+      "timestamp": "2025-04-25T19:33:44.821820"
+    },
+    {
+      "air_humidity": 60.384548869602625,
+      "message": "Sulama gerekli de\u011fil",
+      "prediction": 0,
+      "probability": 0.0,
+      "soil_moisture": 903.7649027047536,
+      "temperature": 22.417008216261348,
+      "timestamp": "2025-04-25T19:33:44.837632"
+    },
+    {
+      "air_humidity": 47.71585509667611,
+      "message": "Sulama gerekli",
+      "prediction": 1,
+      "probability": 0.98,
+      "soil_moisture": 395.00815665960897,
+      "temperature": 29.23756002070735,
+      "timestamp": "2025-04-25T19:33:44.853046"
+    },
+    {
+      "air_humidity": 75.27026555745704,
+      "message": "Sulama gerekli",
+      "prediction": 1,
+      "probability": 1.0,
+      "soil_moisture": 596.2023114733882,
+      "temperature": 24.099844031252992,
+      "timestamp": "2025-04-25T19:33:44.868104"
+    },
+    {
+      "air_humidity": 60.19356878075112,
+      "message": "Sulama gerekli de\u011fil",
+      "prediction": 0,
+      "probability": 0.02,
+      "soil_moisture": 800.5963285932339,
+      "temperature": 21.90558295001095,
+      "timestamp": "2025-04-25T19:33:44.883200"
+    },
+    {
+      "air_humidity": 49.79099364993869,
+      "message": "Sulama gerekli",
+      "prediction": 1,
+      "probability": 1.0,
+      "soil_moisture": 379.6165642217618,
+      "temperature": 27.05825435076291,
+      "timestamp": "2025-04-25T19:33:44.897145"
+    }
+  ]
+}

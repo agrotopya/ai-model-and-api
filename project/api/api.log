@@ -1,0 +1,320 @@
+2025-04-25 19:33:21,998 - agrotopya_api - INFO - Model başarıyla yüklendi.
+2025-04-25 19:33:21,998 - agrotopya_api - INFO - Scaler başarıyla yüklendi.
+2025-04-25 19:33:22,008 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://169.254.0.21:5000
+2025-04-25 19:33:22,008 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-25 19:33:44,728 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:44] "GET /health HTTP/1.1" 200 -
+2025-04-25 19:33:44,898 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:44] "POST /simulate HTTP/1.1" 200 -
+2025-04-25 19:33:46,327 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 400.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:46,344 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:46.344412', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:46,345 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:46] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:46,351 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 850.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:46,371 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 0, 'probability': 0.02, 'timestamp': '2025-04-25T19:33:46.371195', 'message': 'Sulama gerekli değil'}
+2025-04-25 19:33:46,372 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:46] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:46,378 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 666.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:46,393 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:46.393121', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:46,393 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:46] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:46,401 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:46] "GET /history HTTP/1.1" 200 -
+2025-04-25 19:33:46,408 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:46] "GET /stats HTTP/1.1" 200 -
+2025-04-25 19:33:46,415 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:46,430 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:46.430542', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:46,431 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:46] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:46,436 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:46,453 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:46.453555', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:46,454 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:46] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:46,460 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:46,475 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:46.475032', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:46,475 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:46] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:46,480 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:46,495 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:46.495890', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:46,496 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:46] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:46,501 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:46,517 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:46.517128', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:46,517 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:46] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:46,523 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:46,537 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:46.537481', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:46,538 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:46] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:46,543 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:46,569 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:46.569852', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:46,570 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:46] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:46,576 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:46,590 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:46.590181', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:46,590 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:46] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:46,595 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:46,609 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:46.609788', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:46,610 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:46] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:46,615 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:46,630 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:46.630760', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:46,631 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:46] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:46,636 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:46,651 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:46.651404', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:46,652 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:46] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:46,657 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:46,672 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:46.672334', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:46,673 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:46] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:46,677 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:46,692 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:46.692940', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:46,693 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:46] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:46,699 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:46,714 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:46.714768', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:46,715 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:46] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:46,721 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:46,736 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:46.736172', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:46,736 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:46] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:46,744 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:46,764 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:46.764072', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:46,765 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:46] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:46,771 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:46,786 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:46.786103', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:46,786 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:46] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:46,791 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:46,807 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:46.807465', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:46,808 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:46] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:46,814 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:46,832 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:46.832561', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:46,833 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:46] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:46,839 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:46,857 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:46.857226', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:46,858 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:46] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:46,862 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:46,884 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:46.884686', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:46,885 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:46] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:46,890 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:46,907 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:46.907528', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:46,908 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:46] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:46,913 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:46,927 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:46.927824', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:46,928 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:46] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:46,933 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:46,948 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:46.948323', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:46,949 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:46] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:46,954 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:46,969 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:46.969211', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:46,969 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:46] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:46,975 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:46,991 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:46.991036', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:46,991 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:46] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:46,997 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,012 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.012330', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,013 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,017 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,031 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.031398', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,031 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,036 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,051 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.051484', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,052 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,056 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,071 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.071777', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,072 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,079 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,098 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.098877', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,100 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,105 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,119 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.119618', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,120 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,125 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,140 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.139969', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,140 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,145 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,157 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.157458', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,157 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,161 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,172 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.172145', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,172 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,176 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,188 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.188381', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,189 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,193 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,205 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.205211', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,206 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,211 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,225 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.225556', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,226 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,231 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,246 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.246824', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,247 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,252 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,265 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.265527', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,266 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,270 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,284 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.284222', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,284 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,289 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,302 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.302774', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,303 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,307 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,320 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.320435', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,321 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,325 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,340 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.339965', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,340 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,345 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,360 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.360533', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,361 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,366 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,382 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.382925', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,383 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,389 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,404 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.404938', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,405 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,411 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,428 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.428218', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,429 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,434 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,450 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.450063', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,450 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,456 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,470 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.470842', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,471 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,476 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,491 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.491285', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,492 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,497 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,512 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.512428', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,513 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,518 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,533 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.533263', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,534 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,543 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,558 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.558302', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,559 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,564 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,579 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.579832', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,580 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,586 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,604 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.604388', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,605 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,610 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,626 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.626926', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,627 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,633 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,648 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.648039', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,649 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,654 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,669 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.669405', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,670 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,675 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,693 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.692997', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,693 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,699 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,715 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.715554', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,716 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,721 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,738 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.738395', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,739 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,745 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,761 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.761223', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,762 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,767 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,783 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.783910', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,784 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,791 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,816 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.816477', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,818 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,824 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,840 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.840795', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,841 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,847 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,862 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.862233', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,863 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,868 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,884 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.884041', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,884 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,893 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,913 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.913382', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,914 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,919 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,939 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.939067', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,939 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,945 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,960 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.960454', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,961 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,966 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:47,982 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:47.982001', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:47,982 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:47] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:47,987 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:48,002 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:48.002627', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:48,003 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:48] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:48,008 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:48,025 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:48.025695', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:48,026 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:48] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:48,032 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:48,048 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:48.048100', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:48,049 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:48] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:48,054 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:48,071 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:48.071189', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:48,072 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:48] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:48,077 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:48,096 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:48.096470', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:48,097 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:48] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:48,102 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:48,119 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:48.119596', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:48,120 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:48] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:48,125 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:48,141 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:48.141038', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:48,141 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:48] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:48,147 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:48,162 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:48.162720', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:48,163 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:48] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:48,168 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:48,184 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:48.184022', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:48,184 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:48] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:48,189 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:48,206 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:48.206700', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:48,207 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:48] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:48,212 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:48,235 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:48.235036', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:48,236 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:48] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:48,241 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:48,256 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:48.256732', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:48,257 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:48] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:48,262 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:48,277 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:48.277931', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:48,278 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:48] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:48,284 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:48,305 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:48.305454', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:48,306 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:48] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:48,312 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:48,327 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:48.327430', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:48,328 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:48] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:48,335 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:48,349 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:48.349606', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:48,350 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:48] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:48,357 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:48,373 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:48.373777', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:48,374 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:48] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:48,380 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:48,395 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:48.395465', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:48,396 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:48] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:48,402 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:48,416 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:48.416384', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:48,417 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:48] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:48,422 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:48,441 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:48.441021', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:48,441 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:48] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:48,447 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:48,464 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:48.464307', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:48,465 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:48] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:48,470 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:48,485 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:48.485392', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:48,486 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:48] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:48,491 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:48,505 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:48.505787', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:48,506 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:48] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:48,512 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:48,529 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:48.529213', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:48,529 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:48] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:48,535 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:48,550 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:48.550038', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:48,550 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:48] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:48,555 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:48,571 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:48.571929', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:48,572 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:48] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:48,579 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:48,595 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:48.594991', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:48,595 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:48] "POST /predict HTTP/1.1" 200 -
+2025-04-25 19:33:48,600 - agrotopya_api - INFO - Gelen istek: {'soil_moisture': 500.0, 'temperature': 28.0, 'air_humidity': 60.0}
+2025-04-25 19:33:48,614 - agrotopya_api - INFO - Tahmin sonucu: {'prediction': 1, 'probability': 1.0, 'timestamp': '2025-04-25T19:33:48.614395', 'message': 'Sulama gerekli'}
+2025-04-25 19:33:48,614 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 19:33:48] "POST /predict HTTP/1.1" 200 -

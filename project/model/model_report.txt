@@ -1,0 +1,57 @@
+# Agrotopya Yapay Zeka Modeli Raporu
+
+## Model Karþýlaþtýrma Sonuçlarý
+
+| Model | Doðruluk | Kesinlik | Duyarlýlýk | F1 Skoru |
+|-------|----------|----------|------------|----------|
+| Logistic Regression | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
+| Random Forest | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
+| Gradient Boosting | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
+| SVM | 0.9979 | 1.0000 | 0.9962 | 0.9981 |
+| Neural Network | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
+
+## En Ýyi Model: Logistic Regression
+
+En iyi parametreler: {'C': 10, 'solver': 'liblinear'}
+
+## Optimize Edilmiþ Model Test Sonuçlarý
+
+- Doðruluk (Accuracy): 1.0000
+- Kesinlik (Precision): 1.0000
+- Duyarlýlýk (Recall): 1.0000
+- F1 Skoru: 1.0000
+
+### Karmaþýklýk Matrisi
+
+```
+[[220   0]
+ [  0 260]]
+```
+
+
+## Model Kullanýmý
+
+Bu model, toprak nemi, sýcaklýk ve hava nemi verilerine dayanarak sulama pompasýnýn açýlýp açýlmamasý gerektiðini tahmin eder.
+Modelin kullanýmý için önce sensör verilerinin ölçeklendirilmesi, ardýndan modelin tahmin fonksiyonunun çaðrýlmasý gerekir.
+
+Örnek kullaným:
+```python
+import pickle
+
+# Modeli ve ölçeklendiriciyi yükle
+with open('agrotopya_model.pkl', 'rb') as f:
+    model = pickle.load(f)
+
+with open('scaler.pkl', 'rb') as f:
+    scaler = pickle.load(f)
+
+# Yeni veri
+new_data = [[soil_moisture, temperature, air_humidity]]
+
+# Veriyi ölçeklendir
+scaled_data = scaler.transform(new_data)
+
+# Tahmin yap
+prediction = model.predict(scaled_data)
+# prediction[0] == 1 ise pompa açýk, 0 ise pompa kapalý
+```

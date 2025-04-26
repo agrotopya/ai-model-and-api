@@ -1,0 +1,60 @@
+# Veri İşleme Raporu
+
+Veri seti boyutu: (2398, 4)
+
+## Veri Seti Sütunları
+- Soil Moisture
+- Temperature
+- Air Humidity
+- Pump Data
+
+## Veri Seti İstatistikleri
+       Soil Moisture  Temperature  Air Humidity   Pump Data
+count    2398.000000  2398.000000   2398.000000  2398.00000
+mean      663.044264    28.469093     59.445079     0.51960
+std       188.507938     5.999033     12.517299     0.49972
+min       314.511016    18.002132     38.012018     0.00000
+25%       500.843814    23.351996     48.401311     0.00000
+50%       668.536833    28.438401     59.094618     1.00000
+75%       823.521708    33.559488     70.358792     1.00000
+max       984.828010    38.992770     81.267407     1.00000
+
+## Eksik Değer Analizi
+Soil Moisture    0
+Temperature      0
+Air Humidity     0
+Pump Data        0
+
+## Aykırı Değer Analizi
+### Soil Moisture
+- Aykırı değer sayısı: 0 (0.00%)
+- Alt sınır: 16.83
+- Üst sınır: 1307.54
+
+### Temperature
+- Aykırı değer sayısı: 0 (0.00%)
+- Alt sınır: 8.04
+- Üst sınır: 48.87
+
+### Air Humidity
+- Aykırı değer sayısı: 0 (0.00%)
+- Alt sınır: 15.47
+- Üst sınır: 103.30
+
+
+## Korelasyon Analizi
+               Soil Moisture  Temperature  Air Humidity  Pump Data
+Soil Moisture       1.000000     0.009234     -0.005804  -0.857323
+Temperature         0.009234     1.000000      0.011784   0.010277
+Air Humidity       -0.005804     0.011784      1.000000   0.001528
+Pump Data          -0.857323     0.010277      0.001528   1.000000
+
+## Veri Bölme
+- Eğitim seti: 1918 örnek (79.98%)
+- Test seti: 480 örnek (20.02%)
+
+
+## Veri Ölçeklendirme
+StandardScaler kullanılarak veriler ölçeklendirildi.
+- Ortalama değerler: [665.15615918  28.51485151  59.45260739]
+- Standart sapmalar: [188.36336898   6.03082281  12.48105075]
